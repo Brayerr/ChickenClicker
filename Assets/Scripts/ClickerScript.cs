@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClickerScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] Text eggAmoutTxt;
+    [SerializeField] float eggAmount;
+    [SerializeField] int _happiness;
+    [SerializeField] int eggAdded = 1;
+    [SerializeField] int happinessNeeded = 100;
+
+
+    public void AddEggs()
     {
-        
+        eggAmount += eggAdded;
+        eggAmoutTxt.text = eggAmount.ToString();
+
+        if (eggAmount >= (eggAdded * happinessNeeded))
+        {
+            eggAdded++;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
