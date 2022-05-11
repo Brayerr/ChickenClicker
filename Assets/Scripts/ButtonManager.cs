@@ -19,20 +19,22 @@ public class ButtonManager : MonoBehaviour
         switch (upgradeToAdd)
         {
             case UpgradeName.Barrel:
-
+                PlayerData.Instance.ActivateUpgrade(BarrlePrefab);
                 break;
             case UpgradeName.Bucket:
-
+                PlayerData.Instance.ActivateUpgrade(BucketPrefab);
                 break;
             case UpgradeName.HenPen:
-
+                PlayerData.Instance.ActivateUpgrade(HenPrefab);
                 break;
             case UpgradeName.Haybale:
+                PlayerData.Instance.ActivateUpgrade(HayPrefab);
                 break;
             default:
                 break;
         }
     }
+
     public void OpenShop()
     {
 

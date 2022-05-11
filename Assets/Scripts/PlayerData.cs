@@ -27,9 +27,11 @@ public class PlayerData : MonoBehaviour
         }
     }
 
-    public void ActivateUpgrade(Upgrade upgradeType)
+    public void ActivateUpgrade(GameObject upgradeType)
     {
-        switch (upgradeType.myUpgrade)
+        Upgrade _upgrade = upgradeType.GetComponent<Upgrade>();
+
+        switch (_upgrade.myUpgrade)
         {
             case UpgradeName.Barrel:
                 Instantiate(upgradeType, BarrelPos);
