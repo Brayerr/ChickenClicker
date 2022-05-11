@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
-    //List<Upgrades> activeUpgradeList;
-    [SerializeField] List<Transform> barrelPos;
-    [SerializeField] List<Transform> bucketPos;
-    [SerializeField] List<Transform> henPenPos;
-    [SerializeField] List<Transform> hayBalePos;
-    [SerializeField] GameObject shopMenu;
+    [SerializeField] GameObject BucketPrefab, HayPrefab, HenPrefab, BarrlePrefab;
     [SerializeField] GameObject shopMenuButton;
+    [SerializeField] GameObject shopMenu;
 
     public void AddEggs()
     {
         //Activate Effect
         //Print Added Eggs
     }
+
     public void BuyUpgrade(UpgradeName upgradeToAdd)
     {
         switch (upgradeToAdd)
