@@ -14,9 +14,19 @@ public class ButtonManager : MonoBehaviour
         //Print Added Eggs
     }
 
-    public void BuyUpgrade(UpgradeName upgradeToAdd)
+    public void BuyUpgrade(string name)
     {
-        switch (upgradeToAdd)
+        UpgradeName _upgradeName = UpgradeName.Barrel;
+        switch (name)
+        {
+            case "Bucket":
+                _upgradeName = UpgradeName.Bucket;
+                break;
+            default:
+                break;
+        }
+
+        switch (_upgradeName)
         {
             case UpgradeName.Barrel:
                 PlayerData.Instance.ActivateUpgrade(BarrlePrefab);
