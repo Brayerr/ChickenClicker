@@ -24,7 +24,7 @@ public class ButtonManager : MonoBehaviour
             case Upgrade.Barrel:
                 if (PlayerData.Instance.currBarrels < PlayerData.Instance.maxBarrels)
                 {
-
+                    
                 }
                 break;
             case Upgrade.Bucket:
