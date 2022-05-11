@@ -21,14 +21,25 @@ public class ButtonManager : MonoBehaviour
     {
         switch (upgradeToAdd)
         {
-            case Upgrade.barrel:
-                PlayerData.Instance.maxBarrels 
+            case Upgrade.Barrel:
+                if (PlayerData.Instance.currBarrels < PlayerData.Instance.maxBarrels)
+                {
+
+                }
                 break;
-            case Upgrade.bucket:
+            case Upgrade.Bucket:
+                if (PlayerData.Instance.currBuckets < PlayerData.Instance.maxBuckets)
+                {
+
+                }
                 break;
-            case Upgrade.hanpan:
+            case Upgrade.HenPen:
+                if (PlayerData.Instance.currPens < PlayerData.Instance.maxPens)
+                {
+
+                }
                 break;
-            case Upgrade.haybale:
+            case Upgrade.Haybale:
                 break;
             default:
                 break;

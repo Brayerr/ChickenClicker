@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum Upgrade { barrel, bucket, hanpan, haybale }
+public enum Upgrade { Barrel, Bucket, HenPen, Haybale }
 public class PlayerData : MonoBehaviour
 {
     public static PlayerData Instance;
