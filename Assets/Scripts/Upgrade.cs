@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Upgrades : MonoBehaviour
+public class Upgrade : MonoBehaviour
 {
     
-    [SerializeField] Upgrade myUpgrade;
+    [SerializeField] internal UpgradeName myUpgrade;
     [SerializeField] int cost;
     [SerializeField] string name;
     [SerializeField] string description;
-    [SerializeField] int maxUpgradeNum;
+    [SerializeField] internal int maxUpgradeNum;
     [SerializeField] int eggsToAdd;
 
     private void OnEnable()
     {
         PlayerData.Instance.passiveEggs += eggsToAdd;
+        PlayerData.Instance.ActivateUpgrade(this);
     }
 }

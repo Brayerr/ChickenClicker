@@ -17,29 +17,29 @@ public class ButtonManager : MonoBehaviour
         //Activate Effect
         //Print Added Eggs
     }
-    public void BuyUpgrade(Upgrade upgradeToAdd)
+    public void BuyUpgrade(UpgradeName upgradeToAdd)
     {
         switch (upgradeToAdd)
         {
-            case Upgrade.Barrel:
+            case UpgradeName.Barrel:
                 if (PlayerData.Instance.currBarrels < PlayerData.Instance.maxBarrels)
                 {
                     
                 }
                 break;
-            case Upgrade.Bucket:
+            case UpgradeName.Bucket:
                 if (PlayerData.Instance.currBuckets < PlayerData.Instance.maxBuckets)
                 {
 
                 }
                 break;
-            case Upgrade.HenPen:
+            case UpgradeName.HenPen:
                 if (PlayerData.Instance.currPens < PlayerData.Instance.maxPens)
                 {
 
                 }
                 break;
-            case Upgrade.Haybale:
+            case UpgradeName.Haybale:
                 break;
             default:
                 break;

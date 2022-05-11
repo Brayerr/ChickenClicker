@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum Upgrade { Barrel, Bucket, HenPen, Haybale }
+public enum UpgradeName { Barrel, Bucket, HenPen, Haybale }
 public class PlayerData : MonoBehaviour
 {
     public static PlayerData Instance;
@@ -25,6 +25,30 @@ public class PlayerData : MonoBehaviour
 
     public void Update()
     {
+        if (passiveEggs > 0)
+        {
+            currentEggs += passiveEggs;
+        }
+    }
 
+    public void ActivateUpgrade(Upgrade upgradeType)
+    {
+        switch (upgradeType.myUpgrade)
+        {
+            case UpgradeName.Barrel:
+                for (int i = 0; i < upgradeType.maxUpgradeNum; i++)
+                {
+
+                }
+                break;
+            case UpgradeName.Bucket:
+                break;
+            case UpgradeName.HenPen:
+                break;
+            case UpgradeName.Haybale:
+                break;
+            default:
+                break;
+        }
     }
 }
