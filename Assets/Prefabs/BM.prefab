@@ -43,9 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daced89abbced11499cf5919701587b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BucketPrefab: {fileID: 0}
-  HayPrefab: {fileID: 0}
-  HenPrefab: {fileID: 0}
-  BarrlePrefab: {fileID: 0}
+  BucketPrefab: {fileID: 7159975534284593855, guid: c91cfd0aaa20c4d44b40c1720d5be11c, type: 3}
+  HenPrefab: {fileID: 5979857924447794781, guid: 636e6b14e232c034e8d592232bf31875, type: 3}
   shopMenuButton: {fileID: 0}
   shopMenu: {fileID: 0}

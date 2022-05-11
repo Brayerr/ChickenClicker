@@ -1,19 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-    [SerializeField] GameObject BucketPrefab, HayPrefab, HenPrefab, BarrlePrefab;
+    [SerializeField] GameObject BucketPrefab, HenPrefab;
     [SerializeField] GameObject shopMenuButton;
     [SerializeField] GameObject shopMenu;
+    [SerializeField] Text eggCount;
 
     public void AddEggs()
     {
         //Activate Effect
         //Print Added Eggs
         PlayerData.Instance.currentEggs++;
-        Debug.Log("Collected 1 egg");
+        eggCount.text = PlayerData.Instance.currentEggs.ToString();
     }
 
     public void BuyUpgrade(string name)
@@ -39,17 +41,11 @@ public class ButtonManager : MonoBehaviour
 
         switch (_upgradeName)
         {
-            case UpgradeName.Barrel:
-                PlayerData.Instance.ActivateUpgrade(BarrlePrefab);
-                break;
             case UpgradeName.Bucket:
                 PlayerData.Instance.ActivateUpgrade(BucketPrefab);
                 break;
             case UpgradeName.HenPen:
                 PlayerData.Instance.ActivateUpgrade(HenPrefab);
-                break;
-            case UpgradeName.Haybale:
-                PlayerData.Instance.ActivateUpgrade(HayPrefab);
                 break;
             default:
                 break;
