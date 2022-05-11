@@ -14,6 +14,6 @@ public class Upgrades : MonoBehaviour
 
     private void OnEnable()
     {
-        ClickerScript.Instance.passiveEggs += eggsToAdd;
+        PlayerData.Instance.passiveEggs += eggsToAdd;
     }
 }
