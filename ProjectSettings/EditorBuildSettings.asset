@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 3ad1bf04d7f511846899b9342f28afb0
   - enabled: 1
-    path: Assets/Scenes/Eviatar's scene.unity
-    guid: e70e12437a0b73b48bbc088859ca46f1
+    path: Assets/Scenes/ArtScene.unity
+    guid: b754a565d29cd51439dfb73082ad6a8f
   m_configObjects: {}
