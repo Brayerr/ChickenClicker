@@ -7,12 +7,8 @@ public enum UpgradeName { Barrel, Bucket, HenPen, Haybale }
 public class PlayerData : MonoBehaviour
 {
     public static PlayerData Instance;
-    public List<Transform> BucketPos;
-    public List<Transform> BarrelPos;
-    public List<Transform> PenPos;
-    public List<Transform> HayPos;
+    public Transform BucketPos, BarrelPos, PenPos, HayPos;
     public int currentEggs = 0, passiveEggs = 0, eggsToAdd = 1;
-    public int currBarrels, maxBarrels, currBuckets, maxBuckets, currPens, maxPens, currHay, maxHaybales;
 
     public void Awake()
     {
@@ -36,16 +32,16 @@ public class PlayerData : MonoBehaviour
         switch (upgradeType.myUpgrade)
         {
             case UpgradeName.Barrel:
-                for (int i = 0; i < upgradeType.maxUpgradeNum; i++)
-                {
-
-                }
+                Instantiate(upgradeType, BarrelPos);
                 break;
             case UpgradeName.Bucket:
+                Instantiate(upgradeType, BucketPos);
                 break;
             case UpgradeName.HenPen:
+                Instantiate(upgradeType, PenPos);
                 break;
             case UpgradeName.Haybale:
+                Instantiate(upgradeType, HayPos);
                 break;
             default:
                 break;
