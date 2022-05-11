@@ -8,7 +8,7 @@ public class PlayerData : MonoBehaviour
 {
     public static PlayerData Instance;
     public Transform BucketPos, BarrelPos, PenPos, HayPos;
-    public int currentEggs = 0, passiveEggs = 0, eggsToAdd = 1;
+    public int currentEggs = 0, passiveEggs = 0, eggsToAdd = 1, timeBetweenPassiveGain;
 
     public void Awake()
     {
@@ -23,6 +23,7 @@ public class PlayerData : MonoBehaviour
     {
         if (passiveEggs > 0)
         {
+            new WaitForSeconds(timeBetweenPassiveGain);
             currentEggs += passiveEggs;
         }
     }
