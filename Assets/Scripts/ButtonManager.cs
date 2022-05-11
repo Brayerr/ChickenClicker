@@ -16,6 +16,7 @@ public class ButtonManager : MonoBehaviour
         //Print Added Eggs
         PlayerData.Instance.currentEggs++;
         eggCount.text = PlayerData.Instance.currentEggs.ToString();
+        Debug.Log("Egg", eggCount);
     }
 
     public void BuyUpgrade(string name)
